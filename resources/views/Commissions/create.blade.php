@@ -3,24 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Create a Commission</title>
 </head>
 <body>
     <h1>Create a Commission</h1>
-    <form method="post" action="{{route('commission.store')}}">
+    <form method="post" action="{{ route('commission.store') }}">
         @csrf
-        @method('post')
         <div>
             <label>Title</label>
-            <input type="text" name="title" placeholder="Title" />
+            <input type="text" name="Title" placeholder="Title" required />
         </div>
         <div>
             <label>Description</label>
-            <input type="text" name="description" placeholder="Description" />
+            <input type="text" name="Description" placeholder="Description" />
         </div>
         <div>
-            <label>Comment</label>
-            <input type="text" name="comment" placeholder="Comment" />
+            <label>Comments</label>
+            <input type="text" name="Comments" placeholder="Comments" />
         </div>
         <div>
             <input type="submit" value="Save Commission" />
